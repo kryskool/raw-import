@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import sys
 
@@ -9,16 +10,16 @@ except ImportError:
 LONG_DESC = open(os.path.join(os.path.dirname(__file__), "README.rst")).read()
 
 setup(
-    name = "ghp-import",
-    version = "0.1.8",
-    description = "Copy your docs directly to the gh-pages branch.",
+    name = "raw-import",
+    version = "0.1.0",
+    description = "Copy your docs directly to the dedicate branch.",
     long_description = LONG_DESC,
-    author = "Paul Joseph Davis",
-    author_email = "paul.joseph.davis@gmail.com",
+    author = "Christophe CHAUVET",
+    author_email = "christophe.chauvet@gmail.com",
     license = "Tumbolia Public License",
-    url = "http://github.com/davisp/ghp-import",
+    url = "http://github.com/kryskool/raw-import",
     zip_safe = False,
-    
+
     classifiers = [
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
@@ -26,6 +27,7 @@ setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python",
     ],
-   
-    scripts = ['ghp-import']
+
+    scripts = ['raw-import']
 )
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
