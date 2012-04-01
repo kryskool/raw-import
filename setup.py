@@ -17,7 +17,8 @@ setup(
     author = "Christophe CHAUVET",
     author_email = "christophe.chauvet@gmail.com",
     license = "Tumbolia Public License",
-    url = "http://github.com/kryskool/raw-import",
+    url = "http://kryskool.github.com/raw-import/",
+    download_url = "http://github.com/kryskool/raw-import",
     zip_safe = False,
 
     classifiers = [
