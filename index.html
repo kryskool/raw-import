@@ -1,88 +1,145 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
 
-  <title>kryskool/raw-import @ GitHub</title>
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #fc26c7;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #03d938; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #03d938; }
-    h3 { text-align: center; color: #03d938; }
-    a { color: #03d938; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<body>
-  <a href="https://github.com/kryskool/raw-import"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="https://github.com/kryskool/raw-import/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/kryskool/raw-import/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="https://github.com/kryskool/raw-import">raw-import</a>
-      <span class="small">by <a href="https://github.com/kryskool">kryskool</a></span></h1>
-
-    <div class="description">
-      Easily import docs to your gh-pages branch.
-    </div>
-
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
+    <title>Welcome to Raw Pages Import’s documentation! &mdash; Raw Pages Import v0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Raw Pages Import v0.1.0 documentation" href="#" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="#">Raw Pages Import v0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
 
-    
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-raw-pages-import-s-documentation">
+<h1>Welcome to Raw Pages Import&#8217;s documentation!<a class="headerlink" href="#welcome-to-raw-pages-import-s-documentation" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="raw-pages-import">
+<h1>Raw Pages Import<a class="headerlink" href="#raw-pages-import" title="Permalink to this headline">¶</a></h1>
+<p><tt class="docutils literal"><span class="pre">raw-import</span></tt> is a fork of <tt class="docutils literal"><span class="pre">ghp-import</span></tt> to be more generic on branch name</p>
+<p>This is what <tt class="docutils literal"><span class="pre">ghp-import</span></tt> was written for.</p>
+<div class="section" id="big-fat-warning">
+<h2>Big Fat Warning<a class="headerlink" href="#big-fat-warning" title="Permalink to this headline">¶</a></h2>
+<p>This will <strong>DESTROY</strong> your dedicate branch. If you love it, you&#8217;ll want to take
+backups before playing with this. This script assumes that pages is 100%
+derivative. You should never edit files in your gh-pages branch by hand if
+you&#8217;re using this script because you will lose your work.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>Usage: raw-import <span class="o">[</span>OPTIONS<span class="o">]</span> DIRECTORY
 
-    
+Options:
+  -m MESG     The commit message to use on the gh-pages branch.
+  -p          Push the branch to origin/gh-pages after committing.
+  -r REMOTE   The name of the remote to push to. <span class="o">[</span>origin<span class="o">]</span>
+  -b BRANCH   The name of the dedicate branch. <span class="o">[</span>pages<span class="o">]</span>
+  -h, --help  show this <span class="nb">help </span>message and <span class="nb">exit</span>
+</pre></div>
+</div>
+<p>Its pretty simple. Inside your repository just run <tt class="docutils literal"><span class="pre">raw-import</span> <span class="pre">$DOCS_DIR</span></tt>
+where <tt class="docutils literal"><span class="pre">$DOCS_DIR</span></tt> is the path to the <em>built</em> documentation. This will write a
+commit to your <tt class="docutils literal"><span class="pre">dedicate</span></tt> branch with the current documents in it.</p>
+<p>If you specify <tt class="docutils literal"><span class="pre">-p</span></tt> it will also attempt to push the <tt class="docutils literal"><span class="pre">dedicate</span></tt> branch to
+GitHub. By default it&#8217;ll just run <tt class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">pages</span></tt>. You can specify
+a different remote using the <tt class="docutils literal"><span class="pre">-r</span></tt> flag.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>raw-import is distributed under the same license as ghp-import
+(the Tumbolia Public License. See the LICENSE file for more information).</p>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
 
-    
 
-    
-      <h2>Authors</h2>
-      <p>Andrea Crotti (andrea.crotti.0@gmail.com)<br/>Christophe Chauvet (christophe.chauvet@gmail.com)<br/>Paul J. Davis (paul.joseph.davis@gmail.com)<br/>      </p>
-    
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to Raw Pages Import&#8217;s documentation!</a></li>
+<li><a class="reference internal" href="#raw-pages-import">Raw Pages Import</a><ul>
+<li><a class="reference internal" href="#big-fat-warning">Big Fat Warning</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
 
-    
-      <h2>Contact</h2>
-      <p>Christophe Chauvet (christophe@kryskool.org)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/kryskool/raw-import/zipball/master">zip</a> or
-      <a href="https://github.com/kryskool/raw-import/tarball/master">tar formats.
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
     </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/kryskool/raw-import</pre>
-    </p>
-
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="#">Raw Pages Import v0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
     <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/kryskool/raw-import">kryskool/raw-import</a>
+        &copy; Copyright 2012, Christophe CHAUVET.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
-
-  </div>
-
-</body>
+  </body>
 </html>
