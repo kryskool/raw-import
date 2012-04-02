@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to Raw Pages Import’s documentation! &mdash; Raw Pages Import v0.1.0 documentation</title>
+    <title>Raw Pages Import &mdash; Raw Pages Import v0.1.0 documentation</title>
     <link rel="stylesheet" href="static/default.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -40,13 +40,10 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="welcome-to-raw-pages-import-s-documentation">
-<h1>Welcome to Raw Pages Import&#8217;s documentation!<a class="headerlink" href="#welcome-to-raw-pages-import-s-documentation" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="raw-pages-import">
+  <div class="section" id="raw-pages-import">
 <h1>Raw Pages Import<a class="headerlink" href="#raw-pages-import" title="Permalink to this headline">¶</a></h1>
 <p><tt class="docutils literal"><span class="pre">raw-import</span></tt> is a fork of <tt class="docutils literal"><span class="pre">ghp-import</span></tt> to be more generic on branch name</p>
-<p>This is what <tt class="docutils literal"><span class="pre">ghp-import</span></tt> was written for.</p>
+<p>It&#8217;s possible to generate documentation wit <a class="reference external" href="http://sphinx.pocoo.org/">Sphinx</a>, and publish the result of <tt class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></tt> under the specify branch</p>
 <div class="section" id="big-fat-warning">
 <h2>Big Fat Warning<a class="headerlink" href="#big-fat-warning" title="Permalink to this headline">¶</a></h2>
 <p>This will <strong>DESTROY</strong> your dedicate branch. If you love it, you&#8217;ll want to take
@@ -73,6 +70,16 @@ commit to your <tt class="docutils literal"><span class="pre">dedicate</span></t
 GitHub. By default it&#8217;ll just run <tt class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">pages</span></tt>. You can specify
 a different remote using the <tt class="docutils literal"><span class="pre">-r</span></tt> flag.</p>
 </div>
+<div class="section" id="sample">
+<h2>Sample<a class="headerlink" href="#sample" title="Permalink to this headline">¶</a></h2>
+<p>Generate the <a class="reference external" href="http://sphinx.pocoo.org/">Sphinx</a> documentation and publish the content under <tt class="docutils literal"><span class="pre">my-branch</span></tt></p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd </span>doc
+make clean
+make html
+raw-import -b my-branch -p ./build/html/
+</pre></div>
+</div>
+</div>
 <div class="section" id="license">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>raw-import is distributed under the same license as ghp-import
@@ -83,7 +90,6 @@ a different remote using the <tt class="docutils literal"><span class="pre">-r</
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
 <li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
 </ul>
 </div>
@@ -96,10 +102,10 @@ a different remote using the <tt class="docutils literal"><span class="pre">-r</
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Welcome to Raw Pages Import&#8217;s documentation!</a></li>
-<li><a class="reference internal" href="#raw-pages-import">Raw Pages Import</a><ul>
+<li><a class="reference internal" href="#">Raw Pages Import</a><ul>
 <li><a class="reference internal" href="#big-fat-warning">Big Fat Warning</a></li>
 <li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#sample">Sample</a></li>
 <li><a class="reference internal" href="#license">License</a></li>
 </ul>
 </li>
