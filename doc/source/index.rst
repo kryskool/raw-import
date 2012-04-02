@@ -3,15 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Raw Pages Import's documentation!
-============================================
-
 Raw Pages Import
 ================
 
 ``raw-import`` is a fork of ``ghp-import`` to be more generic on branch name
 
-This is what ``ghp-import`` was written for.
+It's possible to generate documentation wit Sphinx_, and publish the result of ``make html`` under the specify branch
 
 .. _GitHub: http://github.com/
 .. _`GitHub Pages`: http://pages.github.com/
@@ -48,6 +45,18 @@ If you specify ``-p`` it will also attempt to push the ``dedicate`` branch to
 GitHub. By default it'll just run ``git push origin pages``. You can specify
 a different remote using the ``-r`` flag.
 
+Sample
+------
+
+Generate the Sphinx_ documentation and publish the content under ``my-branch``
+
+.. code-block:: bash
+
+    cd doc
+    make clean
+    make html
+    raw-import -b my-branch -p ./build/html/
+
 License
 -------
 
@@ -58,6 +67,5 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
