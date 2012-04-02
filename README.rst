@@ -1,12 +1,10 @@
 Raw Pages Import
 ================
 
-``raw-import`` is a fork of ``ghp-import`` to be more generic on branch name
+``raw-import`` is a fork of ``ghp-import`` to be more generic on branch name under Git repository,
 
-This is what ``ghp-import`` was written for.
+It's possible to generate documentation wit Sphinx_, and publish the result of ``make html`` under the specify branch
 
-.. _gunicorn: http://www.gunicorn.com/
-.. _`Benoit Chesneau`: http://github.com/benoitc
 .. _GitHub: http://github.com/
 .. _`GitHub Pages`: http://pages.github.com/
 .. _Sphinx: http://sphinx.pocoo.org/
@@ -37,6 +35,8 @@ Usage
 Its pretty simple. Inside your repository just run ``raw-import $DOCS_DIR``
 where ``$DOCS_DIR`` is the path to the *built* documentation. This will write a
 commit to your ``dedicate`` branch with the current documents in it.
+
+If you specify ``-b`` it can be possible to specify the name of the branch.
 
 If you specify ``-p`` it will also attempt to push the ``dedicate`` branch to
 GitHub. By default it'll just run ``git push origin pages``. You can specify
